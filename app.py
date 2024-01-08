@@ -4,12 +4,12 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 import torch
 import pprint
 
-
+@st.data
 # Load the Hugging Face model
-@st.cache_resource
 model = AutoModelForTokenClassification.from_pretrained(
     "sayyedAhmed/NER-Nepali")
 
+@st.data
 # Load the tokenizer
 tokenizer = AutoTokenizer.from_pretrained("sayyedAhmed/NER-Nepali")
 
