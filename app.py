@@ -6,6 +6,7 @@ import pprint
 
 
 # Load the Hugging Face model
+@st.cache_resource
 model = AutoModelForTokenClassification.from_pretrained(
     "sayyedAhmed/NER-Nepali")
 
